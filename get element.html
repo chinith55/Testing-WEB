@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get element</title>
+</head>
+<body>
+    <p class="tf">two</p>
+    <p class="three">three</p>
+    <p class="tf">four</p>
+    <div class="Title"></div>
+</body>
+<script>
+    // var tf = document.getElementsByClassName('tf');
+    // if(tf!=null){
+    //     alert("selected");
+    // }
+    // else{
+    //     alert('faliled to selected')
+    // }
+    var product =[
+        {'name':'Computer','price':'$1200','type':'electronic'},
+        {'name':'Phone','price':'$1500','type':'electronic'}
+    ]
+    var tmp ='';
+    for (i in product){
+        tmp+=`
+            <div class="box">
+                <h1>${product[i].name}</h1>
+            <div>
+        `
+        document.getElementsByClassName('Title')=tmp;
+    }
+</script>
+</html>

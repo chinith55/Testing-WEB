@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Attribute</title>
+</head>
+<style>
+    div,#feature{
+        width: 500px;
+        height: 300px;
+    }
+    div{
+        margin: 0 auto;
+    }
+    #feature{
+        border: 1px solid lightgray;
+        border-radius: 8px;
+    }
+    .hidden{
+        width: 0;
+        height: 0;
+        float: right;
+    }
+    #title{
+        background-color: green;
+        display: block;
+        text-align: center;
+        width: 504px;
+        margin: 0 auto;
+        color: white;
+        font-family: khmer OS Muol Light;
+        border-radius: 2px;
+    }
+
+
+</style>
+<body>
+    <div>
+        <img class="hidden" src="image/Buiding-A.png" alt="">
+        <img class="hidden" src="image/Entrance-RUPP.png" alt="">
+        <img class="hidden" src="image/Infront-RUPP.png" alt="">
+    </div>
+    <div>
+        <img id="feature" src="./image/RUPP1.png">
+    </div>
+    <p id="title">អគារបី</p>
+</body>
+<script>
+    var img  = document.getElementById('feature');
+    var i =0;
+    var title = document.getElementById('title');
+    var slides = [
+        ["image/Buiding-A.png","អគារអេ"],
+        ["image/Entrance-RUPP.png","ច្រកចូល"],
+        ["image/Infront-RUPP.png","មុខភូមិន្ទ"]
+    ]
+    var Colors =[
+        ["Red","White"],
+        ["Yellow","Black"],
+        ["Blue","white"]
+    ]
+    function slide(){
+        if(i==2) //condition if i =2 will start first slide again
+            i=1
+        feature.src = slides [++i][0];
+        title.textContent = slides [i][1];
+        title.style.color = Colors[i][1];
+    }
+    setInterval(slide,1000);
+
+
+</script>
+</html>

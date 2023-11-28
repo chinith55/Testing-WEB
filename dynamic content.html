@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic content</title>
+</head>
+<style>
+    div{
+        width: 970px;
+        margin: 16px auto;
+    }
+    span{
+        display: inline-block ;
+        width: 320px;
+        height: 256px;
+        font-size: 106px;
+        border-radius: 50%;
+        padding-top: 64px;
+        text-align: center;
+    }
+    #rnd1{
+        background-color: yellow;
+    }
+    #rnd2{
+        background-color: green;
+    }
+    #rnd3{
+        background-color: red;
+    }
+    input{
+        width: 320px;
+        font-size: 20px;
+        margin-top: 14px;
+        border-radius: .5rem;
+        cursor: pointer;
+    }
+    input:hover{
+        background-color: red;
+        color: white;
+    }
+    form{
+        width: 645px;
+        margin: 0 auto;
+    }
+</style>
+<body>
+    <div>
+        <span id="rnd1">0-9</span>
+        <span id="rnd2">1-8</span>
+        <span id="rnd3">2-7</span>
+        <form>
+            <input type="button" id="btnStart" name="btnStart" value="Start">
+            <input type="button" id="btnStop" name="btnStop" value="Stop">
+        </form>
+    </div>
+    <script src="index.js">
+    </script>
+</body>
+</html>
